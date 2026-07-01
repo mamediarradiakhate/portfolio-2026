@@ -15,6 +15,19 @@ function useIsMobile() {
 
 export default function CVPage() {
   const isMobile = useIsMobile();
+  const [copied, setCopied] = useState(false);
+
+  const handleMobileShare = async () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      await navigator.share({ title: "CV — Mame Diarra Bousso Diakhate", url });
+    } else {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   return (
     <>
       {/* Print styles */}
@@ -53,12 +66,17 @@ export default function CVPage() {
             2. <strong>Plus de paramètres</strong> → décochez <strong style={{ color: "#7c3aed" }}>En-têtes et pieds de page</strong>
           </p>
         ) : (
-          <div style={{ background: "#faf5ff", border: "1px solid #7c3aed30", borderRadius: "12px", padding: "0.75rem 1rem", maxWidth: "260px", textAlign: "right" }}>
-            <p style={{ fontSize: "0.78rem", color: "#7c3aed", fontWeight: 700, margin: "0 0 0.3rem 0" }}>📥 Téléchargement du CV</p>
-            <p style={{ fontSize: "0.72rem", color: "#64748b", margin: 0, lineHeight: 1.6 }}>
-              Pour télécharger le CV en PDF, ouvrez cette page sur un <strong>ordinateur</strong>.
+          <button
+            onClick={handleMobileShare}
+            style={{ background: "#7c3aed", border: "none", borderRadius: "12px", padding: "0.75rem 1rem", maxWidth: "220px", textAlign: "center", cursor: "pointer", boxShadow: "0 4px 14px #7c3aed30" }}
+          >
+            <p style={{ fontSize: "0.78rem", color: "#ffffff", fontWeight: 700, margin: "0 0 0.2rem 0" }}>
+              {copied ? "✅ Lien copié !" : "📤 Envoyer le lien"}
             </p>
-          </div>
+            <p style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.8)", margin: 0, lineHeight: 1.5 }}>
+              {copied ? "Ouvre-le sur ordinateur" : "Ouvrir sur ordi pour télécharger"}
+            </p>
+          </button>
         )}
       </div>
 
