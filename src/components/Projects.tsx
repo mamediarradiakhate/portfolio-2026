@@ -434,14 +434,13 @@ function FlipCard({ project, index, onClick }: { project: ProjectDetail; index: 
         {/* ── FACE ARRIÈRE (desktop uniquement) ── */}
         <div style={{
           position: isMobile ? "static" : "absolute", inset: 0,
-          display: isMobile ? "none" : undefined,
+          display: isMobile ? "none" : "flex",
           backfaceVisibility: "hidden",
           WebkitBackfaceVisibility: "hidden",
           transform: "rotateY(180deg)",
           background: project.color,
           borderRadius: "20px",
           padding: "1.5rem",
-          display: "flex",
           flexDirection: "column",
           overflow: "hidden",
         }}>
