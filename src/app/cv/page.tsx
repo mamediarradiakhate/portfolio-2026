@@ -1,6 +1,20 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
+function useIsMobile() {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  return mobile;
+}
+
 export default function CVPage() {
+  const isMobile = useIsMobile();
   return (
     <>
       {/* Print styles */}
@@ -23,17 +37,29 @@ export default function CVPage() {
           <a href="/" style={{ padding: "0.6rem 1.2rem", borderRadius: "10px", border: "1px solid #e2e8f0", background: "#ffffff", color: "#475569", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}>
             ← Portfolio
           </a>
-          <button
-            onClick={() => window.print()}
-            style={{ padding: "0.6rem 1.4rem", borderRadius: "10px", background: "#7c3aed", color: "#ffffff", border: "none", fontSize: "0.85rem", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 14px #7c3aed30" }}
-          >
-            ⬇ Télécharger PDF
-          </button>
+          {!isMobile && (
+            <button
+              onClick={() => window.print()}
+              style={{ padding: "0.6rem 1.4rem", borderRadius: "10px", background: "#7c3aed", color: "#ffffff", border: "none", fontSize: "0.85rem", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 14px #7c3aed30" }}
+            >
+              ⬇ Télécharger PDF
+            </button>
+          )}
         </div>
-        <p style={{ fontSize: "0.72rem", color: "#64748b", background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px", padding: "0.4rem 0.75rem", margin: 0, maxWidth: "300px", textAlign: "right", lineHeight: 1.6 }}>
-          1. <strong>Destination</strong> → <strong style={{ color: "#7c3aed" }}>Enregistrer en PDF</strong><br />
-          2. <strong>Plus de paramètres</strong> → décochez <strong style={{ color: "#7c3aed" }}>En-têtes et pieds de page</strong>
-        </p>
+
+        {!isMobile ? (
+          <p style={{ fontSize: "0.72rem", color: "#64748b", background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px", padding: "0.4rem 0.75rem", margin: 0, maxWidth: "300px", textAlign: "right", lineHeight: 1.6 }}>
+            1. <strong>Destination</strong> → <strong style={{ color: "#7c3aed" }}>Enregistrer en PDF</strong><br />
+            2. <strong>Plus de paramètres</strong> → décochez <strong style={{ color: "#7c3aed" }}>En-têtes et pieds de page</strong>
+          </p>
+        ) : (
+          <div style={{ background: "#faf5ff", border: "1px solid #7c3aed30", borderRadius: "12px", padding: "0.75rem 1rem", maxWidth: "260px", textAlign: "right" }}>
+            <p style={{ fontSize: "0.78rem", color: "#7c3aed", fontWeight: 700, margin: "0 0 0.3rem 0" }}>📥 Téléchargement du CV</p>
+            <p style={{ fontSize: "0.72rem", color: "#64748b", margin: 0, lineHeight: 1.6 }}>
+              Pour télécharger le CV en PDF, ouvrez cette page sur un <strong>ordinateur</strong>.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* ── CV A4 ── */}
