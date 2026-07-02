@@ -1,6 +1,29 @@
 "use client";
 
+import { useState } from "react";
+
 export default function CVPage() {
+  const [loading, setLoading] = useState(false);
+
+  const downloadPDF = async () => {
+    setLoading(true);
+    const element = document.getElementById("cv-content");
+    if (!element) return;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const html2pdf = (await import("html2pdf.js" as any)).default;
+    await html2pdf()
+      .set({
+        margin: [15, 15, 15, 15],
+        filename: "CV_Mame_Diarra_Bousso_Diakhate.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+      })
+      .from(element)
+      .save();
+    setLoading(false);
+  };
+
   return (
     <>
       {/* Print styles */}
@@ -24,20 +47,17 @@ export default function CVPage() {
             ← Portfolio
           </a>
           <button
-            onClick={() => window.print()}
-            style={{ padding: "0.6rem 1.4rem", borderRadius: "10px", background: "#7c3aed", color: "#ffffff", border: "none", fontSize: "0.85rem", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 14px #7c3aed30" }}
+            onClick={downloadPDF}
+            disabled={loading}
+            style={{ padding: "0.6rem 1.4rem", borderRadius: "10px", background: loading ? "#a78bfa" : "#7c3aed", color: "#ffffff", border: "none", fontSize: "0.85rem", fontWeight: 700, cursor: loading ? "wait" : "pointer", boxShadow: "0 4px 14px #7c3aed30", transition: "background 0.2s" }}
           >
-            ⬇ Télécharger PDF
+            {loading ? "⏳ Génération..." : "⬇ Télécharger PDF"}
           </button>
         </div>
-        <p style={{ fontSize: "0.72rem", color: "#64748b", background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px", padding: "0.4rem 0.75rem", margin: 0, maxWidth: "300px", textAlign: "right", lineHeight: 1.6 }}>
-          1. <strong>Destination</strong> → <strong style={{ color: "#7c3aed" }}>Enregistrer en PDF</strong><br />
-          2. <strong>Plus de paramètres</strong> → décochez <strong style={{ color: "#7c3aed" }}>En-têtes et pieds de page</strong>
-        </p>
       </div>
 
       {/* ── CV A4 ── */}
-      <div className="cv-page" style={{
+      <div id="cv-content" className="cv-page" style={{
         maxWidth: "794px",
         margin: "3rem auto",
         padding: "2.5cm 2cm",
