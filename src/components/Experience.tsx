@@ -22,21 +22,22 @@ const workExperiences = [
     bg: "#faf5ff",
     title: "Ingénieure Développement & Intégration ERP Odoo",
     company: "Kilifa Consulting",
-    period: "Sept. 2023 — Présent",
+    period: "Sept. 2023 - Présent",
     tag: "Alternance",
     bullets: [
       "Participation à la digitalisation de l'entreprise via Odoo 17 Community (équipe)",
       "Containerisation de l'environnement Odoo avec Docker et déploiement cloud",
       "Intégration et personnalisation des modules RH, Finance & Comptabilité",
-      "Développement intégral du module Payroll — gestion complète des fiches de paie (Python)",
+      "Développement intégral du module Payroll : gestion complète des fiches de paie (Python)",
     ],
     solo: {
       label: "Projet solo · Mémoire de fin d'études (2025–2026)",
       icon: Bot,
       bullets: [
         "Conception et développement d'une plateforme multi-agents IA commerciale",
-        "Agents de prospection automatisée de nouveaux clients et veille des appels d'offres (BOAMP, France Travail, TED)",
-        "Moteur de matching IA entre les experts de l'entreprise et les marchés détectés par les agents",
+        "Moteur de prospection automatisée de nouveaux clients",
+        "Moteur de veille automatique des appels d'offres depuis les plateformes publiques (BOAMP, France Travail, TED)",
+        "Matching IA entre les experts de l'entreprise et les marchés détectés par les agents",
       ],
     },
   },
@@ -44,14 +45,14 @@ const workExperiences = [
     icon: Rocket,
     color: "#0ea5e9",
     bg: "#f0f9ff",
-    title: "Fondatrice — 3S Tech & IA",
-    company: "3S Tech & IA",
-    period: "2024 — Présent",
+    title: "Fondatrice, 3S Tech & IA",
+    company: "3S Tech & IA (3S POS System, 3S AGENTIC IA)",
+    period: "2024 - Présent",
     tag: "Startup",
     bullets: [
-      "Développement solo de 3S POS System — SaaS de gestion des ventes (du code à la mise en production VPS)",
+      "Développement solo de 3S POS System, plateforme SaaS de gestion commerciale multi-secteurs (commerce, pharmacie, restauration à venir) pour le Sénégal et l'Afrique francophone, du code à la mise en production VPS",
       "Architecture fullstack : React / Node.js / PostgreSQL, déploiement VPS",
-      "Développement de services IA vocaux orientés marché sénégalais",
+      "Développement de 3S AGENTIC IA, plateforme multi-agents IA actuellement en développement",
       "Accompagnement à la digitalisation (sites web, automatisation, outils numériques)",
     ],
   },
@@ -59,9 +60,9 @@ const workExperiences = [
     icon: Rocket,
     color: "#db2777",
     bg: "#fdf2f8",
-    title: "Fondatrice — 3S Design",
+    title: "Fondatrice, 3S Design",
     company: "3S Design",
-    period: "2022 — Présent",
+    period: "2022 - Présent",
     tag: "Agence digitale",
     bullets: [
       "Création de logos, affiches, flyers, cartes de visite pour TPE/PME",
@@ -75,19 +76,19 @@ const educations = [
   {
     title: "Cycle Ingénieur Informatique & Applications",
     school: "ESIEE Paris",
-    period: "2023 — 2026",
+    period: "2023 - 2026",
     location: "Marne-la-Vallée",
     color: "#7c3aed",
     bullets: [
       "DevSecOps Cloud-Native (Node.js, Docker, K8s, Terraform)",
-      "IA — Machine Learning & Deep Learning (Python, TensorFlow/Keras, CNN)",
-      "Réalité Virtuelle — Musée d'Empathie (Unity, C#)",
+      "IA : Machine Learning & Deep Learning (Python, TensorFlow/Keras, CNN)",
+      "Réalité Virtuelle : Musée d'Empathie (Unity, C#)",
     ],
   },
   {
     title: "Licence Sciences de l'Ingénieur",
     school: "Université Paris Nord",
-    period: "2021 — 2022",
+    period: "2021 - 2022",
     location: "Paris",
     color: "#d97706",
     bullets: [],
@@ -95,8 +96,16 @@ const educations = [
   {
     title: "DST Télécommunications & Réseaux",
     school: "École Polytechnique de Dakar",
-    period: "2019 — 2021",
+    period: "2019 - 2021",
     location: "Dakar, Sénégal",
+    color: "#d97706",
+    bullets: [],
+  },
+  {
+    title: "Baccalauréat Scientifique S1",
+    school: "Sénégal",
+    period: "2018",
+    location: "Sénégal",
     color: "#d97706",
     bullets: [],
   },
@@ -140,7 +149,7 @@ export default function Experience() {
             Expériences &amp; <span style={{ color: "#7c3aed" }}>Formations</span>
           </h2>
           <p className="text-[#64748b]" style={{ maxWidth: "520px", fontSize: "1rem", lineHeight: 1.75, marginBottom: "3.5rem" }}>
-            3 ans d&apos;alternance, 2 startups, des projets académiques ambitieux — voici mon parcours.
+            3 ans d&apos;alternance, 2 startups, des projets académiques ambitieux. Voici mon parcours.
           </p>
         </motion.div>
 

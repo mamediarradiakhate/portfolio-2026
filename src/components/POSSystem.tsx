@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ShoppingCart, Pill, Server, BarChart3, Globe, Cloud, CheckCircle2, ExternalLink, Store, Stethoscope, UtensilsCrossed } from "lucide-react";
+import { ShoppingCart, Pill, Server, BarChart3, Globe, Cloud, CheckCircle2, ExternalLink, Store, Stethoscope, UtensilsCrossed, Rocket } from "lucide-react";
 
 const features = [
   { icon: ShoppingCart, title: "Caisse POS", desc: "Scan produit, modes de paiement multiples (espèces, Orange Money, Wave), rendu monnaie, tickets PDF.", color: "#0ea5e9", bg: "#f0f9ff" },
@@ -15,14 +15,8 @@ const features = [
 
 const sectors = [
   { icon: Store, label: "Commerce", desc: "Épicerie, prêt-à-porter, quincaillerie, téléphonie, bijouterie…", color: "#0ea5e9", bg: "#f0f9ff", available: true },
-  { icon: Stethoscope, label: "Pharmacie", desc: "Officines et parapharmacies — contraintes réglementaires incluses.", color: "#db2777", bg: "#fdf2f8", available: true },
-  { icon: UtensilsCrossed, label: "Restauration", desc: "Tables, tickets cuisine, menus QR code — en développement.", color: "#94a3b8", bg: "#f8fafc", available: false },
-];
-
-const plans = [
-  { name: "Basic", price: "5 000", desc: "Caisse POS, stock, crédits clients, export PDF", color: "#0ea5e9" },
-  { name: "Standard", price: "10 000", desc: "Tout Basic + boutique en ligne, commandes WhatsApp", color: "#7c3aed", highlight: true },
-  { name: "Pro", price: "15 000", desc: "Tout Standard + multi-boutiques, reporting global", color: "#059669" },
+  { icon: Stethoscope, label: "Pharmacie", desc: "Officines et parapharmacies, contraintes réglementaires incluses.", color: "#db2777", bg: "#fdf2f8", available: true },
+  { icon: UtensilsCrossed, label: "Restauration", desc: "Tables, tickets cuisine, menus QR code, en développement.", color: "#94a3b8", bg: "#f8fafc", available: false },
 ];
 
 const steps = [
@@ -63,8 +57,8 @@ export default function POSSystem() {
             <h2 className="font-black text-[#0f172a] tracking-tight" style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
               3S <span style={{ color: "#7c3aed" }}>POS System</span>
             </h2>
-            <span style={{ padding: "0.3rem 0.85rem", borderRadius: "999px", fontSize: "0.75rem", fontWeight: 700, background: "#fef3c7", color: "#d97706", border: "1px solid #fde68a" }}>
-              🚀 En phase de lancement
+            <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.3rem 0.85rem", borderRadius: "999px", fontSize: "0.75rem", fontWeight: 700, background: "#fef3c7", color: "#d97706", border: "1px solid #fde68a" }}>
+              <Rocket size={13} /> En phase de lancement
             </span>
           </div>
 
@@ -73,7 +67,7 @@ export default function POSSystem() {
             "Gérez tout. Ne perdez rien."
           </p>
           <p className="text-[#64748b]" style={{ maxWidth: "620px", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "0.75rem" }}>
-            Plateforme SaaS multi-secteurs conçue pour digitaliser les commerces et pharmacies au Sénégal et en Afrique francophone. Développée <strong className="text-[#0f172a]">entièrement en solo</strong> — de l&apos;architecture à la mise en production sur VPS.
+            Plateforme SaaS multi-secteurs conçue pour digitaliser les commerces et pharmacies au Sénégal et en Afrique francophone. Développée <strong className="text-[#0f172a]">entièrement en solo</strong>, de l&apos;architecture à la mise en production sur VPS.
           </p>
           <a href="https://3spossystem.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#7c3aed", textDecoration: "none", marginBottom: "3rem" }}>
             <ExternalLink size={13} /> 3spossystem.com
@@ -135,37 +129,6 @@ export default function POSSystem() {
               </div>
             </FadeIn>
 
-            {/* Plans tarifaires */}
-            <FadeIn delay={0.25}>
-              <div style={{ background: "#ffffff", border: "1px solid #e8edf3", borderRadius: "20px", padding: "1.75rem" }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.1rem" }}>
-                  <p style={{ fontWeight: 700, color: "#0f172a", fontSize: "0.9rem", margin: 0 }}>Plans Commerce (FCFA/mois)</p>
-                  <span style={{ fontSize: "0.72rem", color: "#94a3b8", fontWeight: 600 }}>Sans engagement</span>
-                </div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.75rem" }}>
-                  {plans.map((plan) => (
-                    <div key={plan.name} style={{
-                      borderRadius: "14px",
-                      padding: "1rem",
-                      border: plan.highlight ? `2px solid ${plan.color}50` : "1px solid #e8edf3",
-                      background: plan.highlight ? `${plan.color}06` : "#f8fafc",
-                      position: "relative",
-                    }}>
-                      {plan.highlight && (
-                        <span style={{ position: "absolute", top: "-10px", left: "50%", transform: "translateX(-50%)", background: plan.color, color: "#fff", fontSize: "0.62rem", fontWeight: 800, padding: "0.15rem 0.55rem", borderRadius: "999px", whiteSpace: "nowrap" }}>
-                          Populaire
-                        </span>
-                      )}
-                      <p style={{ fontWeight: 800, color: plan.color, fontSize: "0.82rem", marginBottom: "0.2rem" }}>{plan.name}</p>
-                      <p style={{ fontWeight: 900, color: "#0f172a", fontSize: "1.1rem", lineHeight: 1, marginBottom: "0.4rem" }}>
-                        {plan.price} <span style={{ fontSize: "0.65rem", fontWeight: 600, color: "#94a3b8" }}>FCFA</span>
-                      </p>
-                      <p style={{ color: "#64748b", fontSize: "0.72rem", lineHeight: 1.5, margin: 0 }}>{plan.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
           </div>
 
           {/* Colonne droite — Statut + Stack */}
@@ -225,7 +188,7 @@ export default function POSSystem() {
             <FadeIn delay={0.3}>
               <div style={{ borderRadius: "16px", border: "1px solid #7c3aed20", background: "#7c3aed08", padding: "1.1rem 1.25rem", borderLeft: "4px solid #7c3aed" }}>
                 <p style={{ color: "#475569", fontSize: "0.82rem", lineHeight: 1.75, margin: 0 }}>
-                  <span style={{ color: "#0f172a", fontWeight: 800 }}>Développé en solo</span> — de l&apos;architecture à la mise en ligne sur VPS, en passant par le frontend, le backend, la base de données et le déploiement.
+                  <span style={{ color: "#0f172a", fontWeight: 800 }}>Développé en solo</span>, de l&apos;architecture à la mise en ligne sur VPS, en passant par le frontend, le backend, la base de données et le déploiement.
                 </p>
               </div>
             </FadeIn>

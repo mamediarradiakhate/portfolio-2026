@@ -113,12 +113,12 @@ export default function CVPage() {
           {/* Kilifa — Année 3 */}
           <div className="exp-block" style={expBlock}>
             <div style={expHeader}>
-              <span style={expTitle}>Ingénieure IA — Conception Plateforme Multi-Agents</span>
+              <span style={expTitle}>Ingénieure IA, Conception Plateforme Multi-Agents</span>
               <span style={expDate}>2025 – 2026</span>
             </div>
             <p style={expCompany}>Kilifa Consulting · Île-de-France · Alternance (Année 3)</p>
             <ul style={list}>
-              <li>Conception et développement solo d&apos;une plateforme multi-agents IA (9 workflows N8N, 14 agents IA) pour la prospection commerciale automatisée et la veille des appels d&apos;offres — mémoire de fin d&apos;études</li>
+              <li>Conception et développement solo d&apos;une plateforme multi-agents IA (9 workflows N8N, 14 agents IA) pour la prospection commerciale automatisée et la veille des appels d&apos;offres (mémoire de fin d&apos;études)</li>
               <li>Moteur de veille (opérationnel) : scraping automatique BOAMP, France Travail, TED Europe, scoring IA 0-100, matching expert–offre (score 95/100 atteint), génération automatique de lettres de motivation via l&apos;API Claude (Anthropic)</li>
               <li>Moteur de prospection (développé) : qualification IA des prospects B2B, séquences de relances automatiques J+5/J+10/J+15, traitement IA des réponses entrantes par analyse de sentiment</li>
               <li>CRM web de pilotage (Next.js), API REST (Express.js/TypeScript), base de données PostgreSQL (Prisma), monitoring temps réel (Socket.IO), déployé via Docker sur VPS Kilifa</li>
@@ -129,7 +129,7 @@ export default function CVPage() {
           {/* Kilifa — Année 2 */}
           <div className="exp-block" style={expBlock}>
             <div style={expHeader}>
-              <span style={expTitle}>Développeuse — Module Payroll Odoo</span>
+              <span style={expTitle}>Développeuse, Module Payroll Odoo</span>
               <span style={expDate}>2024 – 2025</span>
             </div>
             <p style={expCompany}>Kilifa Consulting · Île-de-France · Alternance (Année 2)</p>
@@ -143,7 +143,7 @@ export default function CVPage() {
           {/* Kilifa — Année 1 */}
           <div className="exp-block" style={expBlock}>
             <div style={expHeader}>
-              <span style={expTitle}>Intégratrice ERP Odoo — Modules RH & Accès</span>
+              <span style={expTitle}>Intégratrice ERP Odoo, Modules RH & Accès</span>
               <span style={expDate}>2023 – 2024</span>
             </div>
             <p style={expCompany}>Kilifa Consulting · Île-de-France · Alternance (Année 1)</p>
@@ -157,12 +157,12 @@ export default function CVPage() {
           {/* 3S Tech */}
           <div className="exp-block" style={expBlock}>
             <div style={expHeader}>
-              <span style={expTitle}>Fondatrice & Développeuse — 3S Tech & IA</span>
+              <span style={expTitle}>Fondatrice & Développeuse, 3S Tech & IA</span>
               <span style={expDate}>2024 – Présent</span>
             </div>
             <p style={expCompany}>3S Tech & IA · Startup personnelle</p>
             <ul style={list}>
-              <li>Développement solo de 3S POS System : SaaS de gestion commerciale multi-secteurs (commerce, pharmacie) — de l'architecture à la mise en production sur VPS</li>
+              <li>Développement solo de 3S POS System : SaaS de gestion commerciale multi-secteurs (commerce, pharmacie), de l'architecture à la mise en production sur VPS</li>
               <li>Stack : React, Node.js, PostgreSQL, Docker, TypeScript, REST API, JWT Auth</li>
               <li>En développement : 3S AGENTIC IA (plateforme 12 agents IA aux prénoms sénégalais, support wolof, n8n, LangGraph) et Jang Anglais (app éducative trilingue pour enfants)</li>
             </ul>
@@ -171,7 +171,7 @@ export default function CVPage() {
           {/* 3S Design */}
           <div className="exp-block" style={expBlock}>
             <div style={expHeader}>
-              <span style={expTitle}>Fondatrice — 3S Design</span>
+              <span style={expTitle}>Fondatrice, 3S Design</span>
               <span style={expDate}>2022 – Présent</span>
             </div>
             <p style={expCompany}>3S Design · Agence digitale</p>
@@ -193,8 +193,8 @@ export default function CVPage() {
             <p style={expCompany}>ESIEE Paris · Marne-la-Vallée · Apprentissage</p>
             <ul style={list}>
               <li>Projet DevSecOps Cloud-Native : Node.js, Docker, Kubernetes, Terraform, GitHub Actions</li>
-              <li>Projet IA : Machine Learning & Deep Learning — Python, TensorFlow/Keras, CNN (Dogs vs Cats, MNIST, Intel Image Classification)</li>
-              <li>Projet Réalité Virtuelle : Musée d'Empathie — Unity, C#</li>
+              <li>Projet IA : Machine Learning & Deep Learning avec Python, TensorFlow/Keras, CNN (Dogs vs Cats, MNIST, Intel Image Classification)</li>
+              <li>Projet Réalité Virtuelle : Musée d'Empathie, avec Unity, C#</li>
             </ul>
           </div>
 
@@ -243,10 +243,10 @@ export default function CVPage() {
         <section style={{ marginBottom: "1.25rem" }}>
           <h2 style={sectionTitle}>Projets Clés</h2>
           <ul style={list}>
-            <li><strong>3S POS System</strong> — SaaS de gestion commerciale (commerce & pharmacie) développé en solo, déployé en production sur VPS. React, Node.js, PostgreSQL, Docker. Site : 3spossystem.com</li>
-            <li><strong>Plateforme Multi-Agents IA Kilifa</strong> — 9 workflows N8N, 14 agents IA, 2 moteurs (prospection B2B + veille BOAMP/France Travail/TED), CRM Next.js, scoring IA, génération de lettres via Claude API. (Mémoire ingénieur 2026)</li>
-            <li><strong>3S AGENTIC IA</strong> — Plateforme de 12 agents IA aux prénoms sénégalais (Fatou, Koumba, Sokhna…), support wolof via Kàllaama, téléphonie africaine Infobip. En cours de développement.</li>
-            <li><strong>Jang Anglais</strong> — Application mobile éducative trilingue (Wolof, Français, Anglais) pour enfants 5-13 ans. React Native, NLP, Speech-to-Text. En développement.</li>
+            <li><strong>3S POS System.</strong> SaaS de gestion commerciale (commerce & pharmacie) développé en solo, déployé en production sur VPS. React, Node.js, PostgreSQL, Docker. Site : 3spossystem.com</li>
+            <li><strong>Plateforme Multi-Agents IA Kilifa.</strong> 9 workflows N8N, 14 agents IA, 2 moteurs (prospection B2B + veille BOAMP/France Travail/TED), CRM Next.js, scoring IA, génération de lettres via Claude API. (Mémoire ingénieur 2026)</li>
+            <li><strong>3S AGENTIC IA.</strong> Plateforme de 12 agents IA aux prénoms sénégalais (Fatou, Koumba, Sokhna…), support wolof via Kàllaama, téléphonie africaine Infobip. En cours de développement.</li>
+            <li><strong>Jang Anglais.</strong> Application mobile éducative trilingue (Wolof, Français, Anglais) pour enfants 5-13 ans. React Native, NLP, Speech-to-Text. En développement.</li>
           </ul>
         </section>
 
@@ -254,11 +254,11 @@ export default function CVPage() {
         <section style={{ marginBottom: "1rem" }}>
           <h2 style={sectionTitle}>Langues</h2>
           <p style={{ margin: 0 }}>
-            <strong>Français</strong> — Courant (langue de travail)
+            <strong>Français :</strong> courant (langue de travail)
             {" · "}
-            <strong>Anglais</strong> — Intermédiaire (B1/B2)
+            <strong>Anglais :</strong> intermédiaire (B1/B2)
             {" · "}
-            <strong>Wolof</strong> — Langue maternelle
+            <strong>Wolof :</strong> langue maternelle
           </p>
         </section>
 
@@ -270,7 +270,7 @@ export default function CVPage() {
             {" · "}
             <strong>Art</strong>
             {" · "}
-            <strong>Création de contenu IA</strong> — histoires & films générés par IA
+            <strong>Création de contenu IA</strong> (histoires & films générés par IA)
             {" · "}
             <strong>Documentation</strong>
             {" · "}

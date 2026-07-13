@@ -11,7 +11,7 @@ const categories = [
   { label: "DevOps & Cloud",       icon: Cloud,    color: "#d97706", bg: "#fffbeb",  techs: ["Docker", "Kubernetes", "Terraform", "Linux", "Git", "GitHub Actions"] },
   { label: "Bases de données",     icon: Database, color: "#059669", bg: "#f0fdf4",  techs: ["PostgreSQL", "MongoDB", "Neo4j", "SQL", "Prisma"] },
   { label: "IA Agentique",         icon: Bot,      color: "#0d9488", bg: "#f0fdfa",  techs: ["N8N", "Anthropic API", "OpenAI API", "Ollama", "MCP", "LangChain"] },
-  { label: "Outils IA & Prod",     icon: Zap,      color: "#4f46e5", bg: "#eef2ff",  techs: ["Claude AI", "Cursor", "GitHub Copilot", "Notion AI", "ChatGPT", "Windsurf"] },
+  { label: "Outils IA & Prod",     icon: Zap,      color: "#4f46e5", bg: "#eef2ff",  techs: ["Claude AI", "Claude Code", "Cursor", "GitHub Copilot", "Notion AI", "ChatGPT", "Windsurf"] },
 ];
 
 /* Tag animé individuellement au hover */
@@ -62,7 +62,7 @@ export default function TechStack() {
             Mon <span style={{ color: "#7c3aed" }}>stack</span>
           </h2>
           <p className="text-[#64748b]" style={{ maxWidth: "480px", fontSize: "1rem", lineHeight: 1.75, marginBottom: "3.5rem" }}>
-            Technologies que je maîtrise et utilise quotidiennement — du code à la mise en production.
+            Technologies que je maîtrise et utilise quotidiennement, du code à la mise en production.
           </p>
         </motion.div>
 
@@ -132,14 +132,14 @@ export default function TechStack() {
           <motion.div
             animate={{ scale: [1, 1.15, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ width: "44px", height: "44px", borderRadius: "12px", background: "#faf5ff", border: "1px solid #7c3aed25", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: "1.25rem" }}
+            style={{ width: "44px", height: "44px", borderRadius: "12px", background: "#faf5ff", border: "1px solid #7c3aed25", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}
           >
-            ⚡
+            <Zap size={20} style={{ color: "#7c3aed" }} />
           </motion.div>
           <div>
             <p style={{ fontWeight: 700, color: "#0f172a", fontSize: "0.9rem", marginBottom: "0.3rem" }}>Productivité augmentée par l&apos;IA</p>
             <p style={{ color: "#64748b", fontSize: "0.85rem", lineHeight: 1.7, margin: 0 }}>
-              J&apos;intègre les outils IA (Claude, Cursor, Copilot) dans mon workflow pour multiplier ma vitesse d&apos;exécution, améliorer la qualité du code et monter en compétence en continu — tout en gardant la maîtrise des fondamentaux.
+              J&apos;intègre les outils IA (Claude, Cursor, Copilot) dans mon workflow pour multiplier ma vitesse d&apos;exécution, améliorer la qualité du code et monter en compétence en continu, tout en gardant la maîtrise des fondamentaux.
             </p>
           </div>
         </motion.div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { ArrowDown, Mail, Download } from "lucide-react";
+import { ArrowDown, Mail, Download, Sparkles, GraduationCap } from "lucide-react";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -72,8 +72,8 @@ export default function Hero() {
                 background: "#7c3aed", borderRadius: "50%",
                 width: "32px", height: "32px",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                border: "2px solid white", fontSize: "14px"
-              }}>✨</div>
+                border: "2px solid white"
+              }}><Sparkles size={14} color="#ffffff" /></div>
             </motion.div>
 
             {/* Badge */}
@@ -84,7 +84,7 @@ export default function Hero() {
               color: "#15803d", fontSize: "0.8rem", fontWeight: 600,
             }}>
               <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#22c55e", animation: "pulse 2s infinite" }} />
-              Disponible — Île-de-France & Remote
+              Disponible · Île-de-France & Remote
             </div>
 
             {/* Nom */}
@@ -106,6 +106,7 @@ export default function Hero() {
 
             {/* Description */}
             <p style={{ fontSize: "0.9rem", lineHeight: 1.8, color: "#64748b", maxWidth: "340px" }}>
+              À la recherche d&apos;un poste d&apos;ingénieure Fullstack / IA Agentique en CDI.
               Apprentie ingénieure informatique en dernière année à l&apos;ESIEE Paris.
               Fondatrice de{" "}
               <span style={{ color: "#7c3aed", fontWeight: 600 }}>3S Tech & IA</span>
@@ -176,7 +177,7 @@ export default function Hero() {
               >
                 <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d] text-sm font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
-                  Disponible — Île-de-France & Remote
+                  Disponible · Île-de-France & Remote
                 </div>
               </motion.div>
 
@@ -238,6 +239,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.58, ease: "easeOut" }}
               >
+                À la recherche d&apos;un poste d&apos;ingénieure Fullstack / IA Agentique en CDI.
                 Apprentie ingénieure informatique en dernière année à l&apos;ESIEE Paris.
                 Spécialisée en développement Fullstack, IA Agentique et Automatisation.
                 Fondatrice de{" "}
@@ -336,7 +338,7 @@ export default function Hero() {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.75 }}
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#f5f3ff] flex items-center justify-center text-lg">🎓</div>
+                  <div className="w-9 h-9 rounded-xl bg-[#f5f3ff] flex items-center justify-center"><GraduationCap size={18} color="#7c3aed" /></div>
                   <div>
                     <p className="text-[#0f172a] text-xs font-bold">ESIEE Paris</p>
                     <p className="text-[#94a3b8] text-xs">Ingénieure en Informatique</p>
@@ -351,7 +353,7 @@ export default function Hero() {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.88 }}
                 >
-                  <p className="text-white text-xs font-bold">Open to work ✨</p>
+                  <p className="text-white text-xs font-bold flex items-center gap-1">Open to work <Sparkles size={12} /></p>
                 </motion.div>
               </div>
             </motion.div>

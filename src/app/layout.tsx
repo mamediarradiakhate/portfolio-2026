@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mame Diarra Bousso | Ingénieure Fullstack, IA Agentique & Automatisation",
   description:
-    "Portfolio de Mame Diarra Bousso Diakhate — Ingénieure Informatique et Applications, spécialisée en développement Fullstack, IA Agentique et Automatisation. Fondatrice de 3S Tech & IA.",
+    "Portfolio de Mame Diarra Bousso Diakhate, Ingénieure Informatique et Applications, spécialisée en développement Fullstack, IA Agentique et Automatisation. Fondatrice de 3S Tech & IA.",
   keywords: [
     "Fullstack Developer",
     "AI Agent",

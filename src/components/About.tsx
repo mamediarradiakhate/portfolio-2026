@@ -5,10 +5,10 @@ import { useRef, useEffect, useState } from "react";
 import { Brain, Code2, Layers, Rocket } from "lucide-react";
 
 const highlights = [
-  { icon: Code2, title: "Développement Fullstack", desc: "React, Next.js, Node.js, Python — architecture complète du frontend au backend.", color: "#0ea5e9" },
-  { icon: Brain, title: "Intelligence Artificielle", desc: "ML, Deep Learning (CNN), agents IA, automatisation de processus métier.", color: "#7c3aed" },
+  { icon: Code2, title: "Développement Fullstack", desc: "React, Next.js, Node.js, Python : architecture complète du frontend au backend.", color: "#0ea5e9" },
+  { icon: Brain, title: "Intelligence Artificielle", desc: "ML, Deep Learning (CNN), IA agentique (N8N, LangChain, LangGraph, MCP), API Claude/OpenAI, automatisation de processus métier.", color: "#7c3aed" },
   { icon: Layers, title: "DevOps & Cloud", desc: "Docker, Kubernetes, Terraform, CI/CD, déploiement VPS et cloud.", color: "#db2777" },
-  { icon: Rocket, title: "Entrepreneuse", desc: "Fondatrice de 3S Tech & IA et 3S Design — de l'idée à la production.", color: "#d97706" },
+  { icon: Rocket, title: "Entrepreneuse", desc: "Fondatrice de 3S Tech & IA, 3S AGENTIC IA et 3S Design, de l'idée à la production.", color: "#d97706" },
 ];
 
 const stats = [
@@ -20,9 +20,9 @@ const stats = [
 
 const paragraphs = [
   <>Je suis <strong className="text-[#0f172a]">Mame Diarra Bousso Diakhate</strong>, apprentie ingénieure en dernière année à <span style={{ color: "#7c3aed" }} className="font-medium">l&apos;ESIEE Paris</span> (Cycle Ingénieur Informatique & Applications, 2023–2026). Mon parcours m&apos;a amenée de Dakar jusqu&apos;en Île-de-France, où j&apos;ai bâti une expertise solide à la croisée du développement logiciel, du DevOps et de l&apos;intelligence artificielle.</>,
-  <>En alternance chez <span style={{ color: "#7c3aed" }} className="font-medium">Kilifa Consulting</span>, j&apos;ai participé à la digitalisation de l&apos;entreprise via Odoo 17 — containerisation Docker, personnalisation des modules RH & Finance, et développement d&apos;un module Payroll complet.</>,
-  <>En 3ème année, j&apos;ai conçu et développé <span className="font-semibold text-[#0f172a]">en solo</span> une <span style={{ color: "#7c3aed" }} className="font-medium">plateforme multi-agents IA commerciale</span> pour Kilifa — prospection automatisée de nouveaux clients, veille des appels d&apos;offres (BOAMP, France Travail, TED), et matching IA entre experts de l&apos;entreprise et marchés détectés.</>,
-  <>En parallèle, j&apos;ai fondé <span style={{ color: "#7c3aed" }} className="font-medium">3S Tech & IA</span> pour développer <span className="text-[#0f172a] font-medium">3S POS System</span> — un SaaS de gestion des ventes développé solo du début à la mise en production sur VPS, et <span className="text-[#0284c7] font-medium">3S Design</span> pour aider les PME à digitaliser leur image.</>,
+  <>En alternance chez <span style={{ color: "#7c3aed" }} className="font-medium">Kilifa Consulting</span>, j&apos;ai participé à la digitalisation de l&apos;entreprise via Odoo 17, avec containerisation Docker, personnalisation des modules RH & Finance, et développement d&apos;un module Payroll complet.</>,
+  <>En 3ème année, j&apos;ai conçu et développé <span className="font-semibold text-[#0f172a]">en solo</span> une <span style={{ color: "#7c3aed" }} className="font-medium">plateforme multi-agents IA commerciale</span> pour Kilifa, avec un moteur assurant la prospection automatisée de nouveaux clients et un autre moteur pour la veille automatique des appels d&apos;offres depuis les plateformes publiques (BOAMP, France Travail, TED), en assurant aussi le matching entre les experts de l&apos;entreprise et les marchés détectés.</>,
+  <>En parallèle, j&apos;ai fondé <span style={{ color: "#7c3aed" }} className="font-medium">3S Tech & IA</span> pour développer <span className="text-[#0f172a] font-medium">3S POS System</span>, une plateforme SaaS de gestion commerciale multi-secteurs (commerce, pharmacie, restauration à venir) pensée pour le Sénégal et l&apos;Afrique francophone, développée <span className="font-semibold text-[#0f172a]">en solo</span> du début à la mise en production sur VPS. J&apos;y développe aussi <span className="text-[#0f172a] font-medium">3S AGENTIC IA</span>, une plateforme multi-agents IA actuellement en développement, ainsi que <span className="text-[#0284c7] font-medium">3S Design</span> pour aider les PME à digitaliser leur image et leur communication (logos, flyers, vidéos).</>,
 ];
 
 /* Count-up animé */
@@ -66,7 +66,7 @@ export default function About() {
             À <span style={{ color: "#7c3aed" }}>propos</span>
           </h2>
           <p className="text-[#64748b]" style={{ fontSize: "1rem", maxWidth: "520px", lineHeight: 1.75, marginBottom: "3.5rem" }}>
-            Ingénieure informatique, entrepreneuse et passionnée par l&apos;IA — voici mon parcours en quelques lignes.
+            Ingénieure informatique, entrepreneuse et passionnée par l&apos;IA. Voici mon parcours en quelques lignes.
           </p>
         </motion.div>
 
