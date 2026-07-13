@@ -60,10 +60,10 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center flex-shrink-0" style={{ gap: "0.6rem" }}>
             <div
-              className="flex items-center justify-center rounded-lg text-sm font-black text-white"
-              style={{ width: "32px", height: "32px", background: "#7c3aed" }}
+              className="flex items-center justify-center rounded-full overflow-hidden"
+              style={{ width: "32px", height: "32px", border: "2px solid #7c3aed", flexShrink: 0 }}
             >
-              M
+              <img src="/photo.png" alt="Mame Diarra Bousso Diakhate" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
             </div>
             <span className="font-bold text-[#0f172a] text-sm hidden lg:block">
               MDB<span style={{ color: "#7c3aed" }}>.</span>

@@ -78,8 +78,8 @@ export default function CVPage() {
             Ingénieure Fullstack | IA Agentique | Automatisation
           </p>
           <p style={{ margin: 0, fontSize: "9.5pt", color: "#334155", lineHeight: 1.7 }}>
-            diakhate.mamediarrabousso99@gmail.com
-            {" · "}+33 6 61 93 39 65
+            <a href="mailto:diakhate.mamediarrabousso99@gmail.com" style={{ color: "#334155", textDecoration: "none" }}>diakhate.mamediarrabousso99@gmail.com</a>
+            {" · "}<a href="tel:+33661933965" style={{ color: "#334155", textDecoration: "none" }}>+33 6 61 93 39 65</a>
             {" · "}Île-de-France, France
           </p>
         </header>
