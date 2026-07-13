@@ -13,7 +13,7 @@ export default function CVPage() {
     const html2pdf = (await import("html2pdf.js" as any)).default;
     await html2pdf()
       .set({
-        margin: [15, 15, 15, 15],
+        margin: [8, 15, 15, 15],
         filename: "CV_Mame_Diarra_Bousso_Diakhate.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
@@ -60,7 +60,7 @@ export default function CVPage() {
       <div id="cv-content" className="cv-page" style={{
         maxWidth: "794px",
         margin: "3rem auto",
-        padding: "1.3cm 2cm 2.5cm",
+        padding: "0.5cm 2cm 2.5cm",
         background: "#ffffff",
         boxShadow: "0 4px 40px rgba(0,0,0,0.12)",
         fontFamily: "Arial, Helvetica, sans-serif",
