@@ -34,10 +34,9 @@ const workExperiences = [
       label: "Projet solo · Mémoire de fin d'études (2025–2026)",
       icon: Bot,
       bullets: [
-        "Conception et développement d'une plateforme multi-agents IA commerciale",
-        "Moteur de prospection automatisée de nouveaux clients",
-        "Moteur de veille automatique des appels d'offres depuis les plateformes publiques (BOAMP, France Travail, TED)",
-        "Matching IA entre les experts de l'entreprise et les marchés détectés par les agents",
+        "Conception et développement d'une plateforme multi-agents IA pour automatiser le développement commercial, jusque-là entièrement porté par le dirigeant",
+        "Moteur de veille : détecte 2x/jour les appels d'offres pertinents (BOAMP, France Travail, TED), sélectionne l'expert le plus adapté et prépare la candidature pour validation",
+        "Moteur de prospection : identifie et qualifie chaque jour de nouveaux prospects B2B, envoie un premier contact puis relance automatiquement selon un calendrier progressif",
       ],
     },
   },
