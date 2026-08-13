@@ -50,8 +50,8 @@ const workExperiences = [
     tag: "Startup",
     bullets: [
       "Développement solo de 3S POS System, plateforme SaaS de gestion commerciale multi-secteurs (commerce, pharmacie, restauration à venir) pour le Sénégal et l'Afrique francophone, du code à la mise en production VPS",
-      "Architecture fullstack : React / Node.js / PostgreSQL, déploiement VPS",
-      "Développement de 3S AGENTIC IA, plateforme multi-agents IA actuellement en développement",
+      "Architecture fullstack : Python / FastAPI / PostgreSQL en backend, React / Next.js en frontend, déploiement VPS",
+      "3S AGENTIC IA et Jang Anglais : cahier des charges et maquettes réalisés, développement pas encore démarré",
       "Accompagnement à la digitalisation (sites web, automatisation, outils numériques)",
     ],
   },

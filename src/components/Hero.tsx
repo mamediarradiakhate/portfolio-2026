@@ -98,7 +98,7 @@ export default function Hero() {
               <div style={{ width: "3px", height: "24px", borderRadius: "99px", background: "#7c3aed", flexShrink: 0 }} />
               <p style={{ fontSize: "1rem", fontWeight: 600, color: "#475569" }}>
                 <TypeAnimation
-                  sequence={["Ingénieure Fullstack", 2200, "Développeuse AI & Agents IA", 2200, "Experte DevOps & Cloud", 2200, "Fondatrice 3S Tech & IA", 2200]}
+                  sequence={["Ingénieure IA Générative & Agents IA", 2200, "DevOps & LLMOps", 2200, "Développeuse Fullstack", 2200, "Fondatrice 3S Tech & IA", 2200]}
                   wrapper="span" speed={60} repeat={Infinity}
                 />
               </p>
@@ -220,9 +220,9 @@ export default function Hero() {
                 <p className="text-lg font-semibold text-[#475569]">
                   <TypeAnimation
                     sequence={[
-                      "Ingénieure Fullstack", 2200,
-                      "Développeuse AI & Agents IA", 2200,
-                      "Experte DevOps & Cloud", 2200,
+                      "Ingénieure IA Générative & Agents IA", 2200,
+                      "DevOps & LLMOps", 2200,
+                      "Développeuse Fullstack", 2200,
                       "Fondatrice 3S Tech & IA", 2200,
                       "Intégratrice ERP Odoo", 2200,
                     ]}

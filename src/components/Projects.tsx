@@ -11,7 +11,7 @@ const GithubIcon = () => (
 );
 
 type Category = "Tous" | "ESIEE Paris" | "Kilifa Consulting" | "3S Tech & IA";
-type StatusType = "En production" | "En cours" | "Terminé" | "En lancement" | "Activité continue";
+type StatusType = "En production" | "En cours" | "Terminé" | "En lancement" | "Activité continue" | "Stade de cadrage";
 
 interface ProjectDetail {
   title: string;
@@ -43,24 +43,24 @@ const projects: ProjectDetail[] = [
     shortDesc: "Plateforme SaaS de gestion commerciale multi-secteurs (commerce, pharmacie, restauration à venir) pour le Sénégal et l'Afrique francophone, développée en solo du code à la mise en production sur VPS, avec l'appui de Claude Code pour certaines fonctionnalités techniques complexes.",
     fullDesc: "3S POS System est une plateforme SaaS de gestion commerciale multi-secteurs, conçue pour digitaliser et professionnaliser la gestion des commerces et des pharmacies au Sénégal et en Afrique francophone. En un seul abonnement, le client gère ses ventes, son stock, ses achats, ses finances, son équipe et sa présence en ligne, avec en option un pack matériel complet (écran de caisse, tiroir-caisse, imprimante, scanner) en location ou à l'achat. Développé de A à Z (architecture, frontend, backend, base de données, déploiement) et actuellement en phase de test final avant lancement officiel.",
     challenge: "La grande majorité des commerçants et pharmaciens sénégalais gèrent encore leur activité avec des cahiers papier, des tableaux Excel ou des logiciels importés inadaptés aux réalités locales, sans traçabilité ni visibilité sur leur performance réelle, avec un matériel de caisse non connecté aux données de vente.",
-    solution: "Architecture fullstack React/Node.js/PostgreSQL déployée sur VPS, fonctionnant en mode hybride (avec ou sans connexion internet), avec paiements locaux Orange Money et Wave, un module pharmacie spécialisé (DCI, alertes péremption, ordonnances), un pack matériel connecté en option, et un dashboard analytics en temps réel.",
+    solution: "Architecture backend Python/FastAPI (SQLAlchemy 2.0 async) multi-tenant, frontend React/Next.js, déployée sur VPS, fonctionnant en mode hybride (avec ou sans connexion internet), avec paiements locaux Orange Money et Wave, un module pharmacie spécialisé (DCI, alertes péremption, ordonnances), un pack matériel connecté en option, et un dashboard analytics en temps réel.",
     impact: "Marché cible : plus de 300 000 commerces et 1 200 pharmacies au Sénégal, extensible à l'Afrique francophone (Côte d'Ivoire, Mali, Guinée, Cameroun, Togo, Bénin). Projet en phase de test avant lancement officiel, déjà fonctionnel en production sur VPS.",
-    stack: ["React", "Node.js", "PostgreSQL", "Docker", "VPS", "TypeScript", "REST API", "JWT Auth"],
+    stack: ["Python", "FastAPI", "SQLAlchemy", "React", "Next.js", "PostgreSQL", "Docker", "VPS", "TypeScript", "JWT Auth"],
     features: ["Caisse POS avec paiements multiples (espèces, Orange Money, Wave, carte)", "Gestion des stocks et catalogue en temps réel avec alertes", "Module pharmacie : médicaments par DCI, ordonnances, alertes péremption", "Boutique en ligne et commandes via WhatsApp", "Facturation, finances et gestion des crédits clients", "Multi-sites avec tableau de bord consolidé", "Mode hybride : fonctionne avec ou sans connexion internet", "Pack matériel connecté (caisse, tiroir, imprimante, scanner) en location ou achat", "Dashboard analytics (ventes, stocks, tendances)", "Gestion multi-utilisateurs avec rôles et permissions"],
   },
   {
     title: "3S AGENTIC IA",
     category: "3S Tech & IA",
     context: "3S Tech & IA",
-    period: "2026 - En cours",
-    status: "En cours",
+    period: "2026",
+    status: "Stade de cadrage",
     color: "#0d9488",
-    shortDesc: "Plateforme d'agents IA aux prénoms sénégalais pour automatiser les tâches des entreprises africaines et mondiales : 12 agents spécialisés, support wolof, téléphonie africaine.",
-    fullDesc: "3S Agentic IA est une plateforme multi-agents IA avec une identité culturelle forte : chaque agent porte un prénom sénégalais. Conçue pour automatiser les tâches quotidiennes des entreprises africaines et mondiales 24h/24, 7j/7. Vision : créer la version africaine des grandes plateformes d'agents IA, avec le support du wolof et une architecture pensée pour les réalités africaines.",
+    shortDesc: "Plateforme d'agents IA aux prénoms sénégalais pour automatiser les tâches des entreprises africaines et mondiales : 12 agents prévus, support wolof, téléphonie africaine. Cahier des charges et maquettes réalisés.",
+    fullDesc: "3S Agentic IA est un projet de plateforme multi-agents IA avec une identité culturelle forte : chaque agent porterait un prénom sénégalais. Pensée pour automatiser les tâches quotidiennes des entreprises africaines et mondiales. Vision : créer la version africaine des grandes plateformes d'agents IA, avec le support du wolof et une architecture pensée pour les réalités africaines. Cahier des charges technique et fonctionnel finalisé, maquettes et design réalisés ; développement non démarré.",
     challenge: "Les plateformes d'agents IA existantes (Limova.ai, Agentova) sont pensées pour le marché occidental : noms occidentaux, pas de support wolof, pas de téléphonie africaine, pas d'agent vidéo. Le marché africain est inexploité malgré un besoin réel d'automatisation.",
-    solution: "12 agents spécialisés (Fatou-Marketing, Koumba-CM, Sokhna-Vidéo, Ousmane-Téléphonie…), orchestrés via n8n, avec support wolof via Kàllaama (open-source), téléphonie africaine via Infobip (+221 Sénégal), génération vidéo via Veo 3 + Gemini, et clonage de voix via Fish Audio.",
-    impact: "Projet en cours de développement (Phase 1). Différenciation forte vs concurrents : seule plateforme avec agent vidéo IA, support wolof natif, téléphonie africaine et ancrage culturel sénégalais.",
-    stack: ["Python", "FastAPI", "n8n", "Next.js", "PostgreSQL", "Docker", "OpenAI API", "Gemini API", "VAPI", "Twilio", "Infobip", "ElevenLabs", "Veo 3", "LangChain"],
+    solution: "Architecture cible : 12 agents spécialisés (Fatou-Marketing, Koumba-CM, Sokhna-Vidéo, Ousmane-Téléphonie…), orchestrés via n8n, avec support wolof via Kàllaama (open-source), téléphonie africaine via Infobip (+221 Sénégal), génération vidéo, et clonage de voix. Le tout encore au stade de conception, pas encore implémenté.",
+    impact: "Cahier des charges et maquettes finalisés. Différenciation prévue vs concurrents : agent vidéo IA, support wolof natif, téléphonie africaine et ancrage culturel sénégalais. Développement pas encore démarré.",
+    stack: ["N8N", "FastAPI", "PostgreSQL", "Docker", "LLM API (Claude/GPT/Gemini)", "LangGraph", "RAG"],
     features: [
       "Fatou (Marketing) : campagnes pub, logos, identité visuelle",
       "Koumba (Community Manager) : réseaux sociaux, planning éditorial",
@@ -70,24 +70,23 @@ const projects: ProjectDetail[] = [
       "Babacar (Service Client) : emails, WhatsApp, chatbot multicanal",
       "Moussa (Rédacteur SEO) : articles, newsletters, optimisation SEO",
       "Adja (Comptable) : devis, factures, relances paiement",
-      "Support wolof natif via Kàllaama (open-source sénégalais)",
-      "Téléphonie africaine via Infobip (numéros +221 Sénégal)",
-      "Clonage de voix via Fish Audio, multilingue FR/EN/Wolof",
-      "Architecture modulaire : 1 agent = 1 conteneur Docker indépendant",
+      "Support wolof natif prévu via Kàllaama (open-source sénégalais)",
+      "Téléphonie africaine prévue via Infobip (numéros +221 Sénégal)",
+      "Architecture modulaire prévue : 1 agent = 1 conteneur Docker indépendant",
     ],
   },
   {
     title: "Jang Anglais",
     category: "3S Tech & IA",
     context: "3S Tech & IA",
-    period: "2026 - En cours",
-    status: "En cours",
+    period: "2026",
+    status: "Stade de cadrage",
     color: "#d97706",
-    shortDesc: "Application éducative trilingue (Wolof, Français, Anglais) pour enfants de 5 à 13 ans : apprendre l'anglais en jouant, inspirée de l'intégration de l'anglais dans le primaire au Sénégal.",
+    shortDesc: "Application éducative trilingue (Wolof, Français, Anglais) pour enfants de 5 à 13 ans : apprendre l'anglais en jouant, inspirée de l'intégration de l'anglais dans le primaire au Sénégal. Cahier des charges et maquettes réalisés.",
     fullDesc: "Jang Anglais (\"apprendre\" en wolof) est une application mobile éducative née d'une opportunité concrète : l'État du Sénégal a intégré l'enseignement de l'anglais dès le primaire. L'idée : créer une app trilingue wolof/français/anglais permettant aux enfants de 5 à 13 ans d'apprendre l'anglais de façon interactive et ludique, dans leur langue maternelle.",
     challenge: "Les enfants sénégalais ont besoin d'apprendre l'anglais mais les applications existantes (Duolingo, etc.) sont pensées pour des adultes ou des enfants occidentaux, sans support wolof, sans ancrage culturel africain, pas adapté aux tranches d'âge du primaire sénégalais.",
     solution: "Application mobile gamifiée trilingue : l'enfant choisit son interface en wolof ou français, puis apprend l'anglais via des mini-jeux, des histoires interactives, des exercices audio et des niveaux progressifs adaptés à chaque tranche d'âge (5-7, 8-10, 11-13 ans).",
-    impact: "Projet en cours de développement. Cible prioritaire : les élèves du primaire sénégalais concernés par la nouvelle réforme éducative. Potentiel d'extension à toute l'Afrique de l'Ouest francophone.",
+    impact: "Cahier des charges et maquettes réalisés ; développement non démarré. Cible prioritaire : les élèves du primaire sénégalais concernés par la nouvelle réforme éducative. Potentiel d'extension à toute l'Afrique de l'Ouest francophone.",
     stack: ["React Native", "Node.js", "PostgreSQL", "Python", "NLP", "Speech-to-Text", "Kàllaama", "Expo", "Firebase"],
     features: [
       "Interface trilingue : Wolof, Français, Anglais",
@@ -155,7 +154,7 @@ const projects: ProjectDetail[] = [
     period: "2025 - 2026",
     status: "En cours",
     color: "#7c3aed",
-    shortDesc: "Plateforme intelligente développée en solo pour automatiser le développement commercial de Kilifa Consulting, jusque-là entièrement porté par le dirigeant.",
+    shortDesc: "Plateforme intelligente pour automatiser le développement commercial de Kilifa Consulting, jusque-là entièrement porté par le dirigeant.",
     fullDesc: "En troisième année, la direction m'a confié la responsabilité de concevoir et développer une plateforme multi-agents IA destinée à automatiser la prospection commerciale et la veille des appels d'offres. J'ai piloté l'ensemble du cycle : analyse du besoin, architecture, développement, tests et documentation. Ce projet constitue l'objet de mon mémoire de fin d'études.",
     challenge: "Kilifa Consulting ne dispose pas de profil commercial dédié : recherche d'opportunités, préparation des candidatures et prospection reposaient entièrement sur le dirigeant, au prix d'un temps considérable sur des tâches répétitives.",
     solution: "Deux moteurs indépendants orchestrés par N8N. Le moteur de veille détecte automatiquement les appels d'offres pertinents, sélectionne l'expert le plus adapté et prépare la candidature pour validation du dirigeant. Le moteur de prospection identifie de nouveaux prospects B2B, les qualifie et gère les relances jusqu'au traitement des réponses. Un CRM web (Next.js) centralise le pilotage des deux moteurs.",
@@ -218,6 +217,7 @@ const statusConfig: Record<StatusType, { color: string; bg: string }> = {
   "En lancement":  { color: "#0ea5e9", bg: "#e0f2fe" },
   "Terminé":       { color: "#64748b", bg: "#f1f5f9" },
   "Activité continue": { color: "#db2777", bg: "#fdf2f8" },
+  "Stade de cadrage": { color: "#64748b", bg: "#f1f5f9" },
 };
 
 function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {

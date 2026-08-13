@@ -5,12 +5,12 @@ import { useRef, useState } from "react";
 import { Monitor, Server, Brain, Cloud, Database, Zap, Bot } from "lucide-react";
 
 const categories = [
-  { label: "Frontend",             icon: Monitor,  color: "#0ea5e9", bg: "#f0f9ff",  techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML/CSS"] },
-  { label: "Backend",              icon: Server,   color: "#7c3aed", bg: "#faf5ff",  techs: ["Node.js", "Express.js", "Python", "REST API", "C#", "Odoo Framework"] },
+  { label: "Frontend",             icon: Monitor,  color: "#0ea5e9", bg: "#f0f9ff",  techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Zustand", "HTML/CSS"] },
+  { label: "Backend",              icon: Server,   color: "#7c3aed", bg: "#faf5ff",  techs: ["Python", "FastAPI", "SQLAlchemy", "Node.js", "Express.js", "REST API", "C#", "Odoo Framework"] },
   { label: "IA & Data",            icon: Brain,    color: "#db2777", bg: "#fdf2f8",  techs: ["Machine Learning", "Deep Learning", "TensorFlow", "Keras", "CNN", "Scikit-learn"] },
-  { label: "DevOps & Cloud",       icon: Cloud,    color: "#d97706", bg: "#fffbeb",  techs: ["Docker", "Kubernetes", "Terraform", "Linux", "Git", "GitHub Actions"] },
-  { label: "Bases de données",     icon: Database, color: "#059669", bg: "#f0fdf4",  techs: ["PostgreSQL", "MongoDB", "Neo4j", "SQL", "Prisma"] },
-  { label: "IA Agentique",         icon: Bot,      color: "#0d9488", bg: "#f0fdfa",  techs: ["N8N", "Anthropic API", "OpenAI API", "Ollama", "MCP", "LangChain"] },
+  { label: "DevOps & Cloud",       icon: Cloud,    color: "#d97706", bg: "#fffbeb",  techs: ["Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "Linux", "Git", "GitHub Actions"] },
+  { label: "Bases de données",     icon: Database, color: "#059669", bg: "#f0fdf4",  techs: ["PostgreSQL", "Redis", "MongoDB", "Neo4j", "SQL", "Prisma"] },
+  { label: "IA Agentique",         icon: Bot,      color: "#0d9488", bg: "#f0fdfa",  techs: ["N8N", "Anthropic API", "OpenAI API", "LangChain", "LangGraph", "RAG", "Ollama", "MCP"] },
   { label: "Outils IA & Prod",     icon: Zap,      color: "#4f46e5", bg: "#eef2ff",  techs: ["Claude AI", "Claude Code", "Cursor", "GitHub Copilot", "Notion AI", "ChatGPT", "Windsurf"] },
 ];
 
