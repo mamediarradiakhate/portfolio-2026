@@ -28,6 +28,7 @@ const cvData: {
   email: string;
   phone: string;
   location: string;
+  portfolio: string;
   profil: string[];
   experience: ExpItem[];
   produits: ExpItem[];
@@ -42,6 +43,7 @@ const cvData: {
   email: "diakhate.mamediarrabousso99@gmail.com",
   phone: "+33 6 61 93 39 65",
   location: "Île-de-France, France",
+  portfolio: "https://portfolio-2026-6a8d.vercel.app",
 
   profil: [
     "Ingénieure informatique (Bac+5), avec 3 ans d'expérience en développement d'applications web chez Kilifa Consulting et une spécialisation en IA générative et agentique. Expérience en conception de systèmes multi-agents, automatisation IA, fullstack et déploiement, avec une orientation DevOps/LLMOps.",
@@ -402,6 +404,10 @@ export default function CVPage() {
       doc.textWithLink(cvData.phone, marginX + emailWidth + sepWidth, y, { url: `tel:${cvData.phone.replace(/\s/g, "")}` });
       const phoneWidth = doc.getTextWidth(cvData.phone);
       doc.text(`   ·   ${cvData.location}`, marginX + emailWidth + sepWidth + phoneWidth, y);
+      y += 4;
+
+      const portfolioLabel = cvData.portfolio.replace(/^https?:\/\//, "");
+      doc.textWithLink(portfolioLabel, marginX, y, { url: cvData.portfolio });
       y += 3.2;
 
       doc.setDrawColor(purple[0], purple[1], purple[2]);
@@ -590,6 +596,9 @@ export default function CVPage() {
             <a href={`mailto:${cvData.email}`} style={{ color: "#334155", textDecoration: "none" }}>{cvData.email}</a>
             {" · "}<a href={`tel:${cvData.phone.replace(/\s/g, "")}`} style={{ color: "#334155", textDecoration: "none" }}>{cvData.phone}</a>
             {" · "}{cvData.location}
+          </p>
+          <p style={{ margin: "0.15rem 0 0 0", fontSize: "8.3pt", color: "#334155", lineHeight: 1.5 }}>
+            <a href={cvData.portfolio} target="_blank" rel="noopener noreferrer" style={{ color: "#7c3aed", textDecoration: "none", fontWeight: 600 }}>{cvData.portfolio.replace(/^https?:\/\//, "")}</a>
           </p>
         </header>
 

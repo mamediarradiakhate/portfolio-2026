@@ -79,7 +79,7 @@ const educations = [
     location: "Marne-la-Vallée",
     color: "#7c3aed",
     bullets: [
-      "DevSecOps Cloud-Native (Node.js, Docker, K8s, Terraform)",
+      "DevOps Cloud-Native (Node.js, Docker, K8s, Terraform)",
       "IA : Machine Learning & Deep Learning (Python, TensorFlow/Keras, CNN)",
       "Réalité Virtuelle : Musée d'Empathie (Unity, C#)",
     ],
