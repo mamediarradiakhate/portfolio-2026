@@ -38,16 +38,15 @@ const cvData: {
   langues: { lang: string; level: string }[];
 } = {
   name: "Mame Diarra Bousso Diakhate",
-  title: "Ingénieure IA Générative & Agentique | Backend · DevOps",
+  title: "Ingénieure IA Générative & Agentique | Fullstack · DevOps",
   email: "diakhate.mamediarrabousso99@gmail.com",
   phone: "+33 6 61 93 39 65",
   location: "Île-de-France, France",
 
   profil: [
-    "Élève-ingénieure en dernière année à l'ESIEE Paris, avec 3 ans d'alternance en développement logiciel et une spécialisation en IA générative et agentique. Expérience en conception de systèmes multi-agents, backend, automatisation et déploiement, avec une orientation DevOps/LLMOps.",
+    "Ingénieure informatique (Bac+5), avec 3 ans d'expérience en développement d'applications web chez Kilifa Consulting et une spécialisation en IA générative et agentique. Expérience en conception de systèmes multi-agents, automatisation IA, fullstack et déploiement, avec une orientation DevOps/LLMOps.",
     "Conception et développement d'une plateforme multi-agents IA chez Kilifa Consulting : 14 agents spécialisés orchestrés par 9 pipelines N8N pour automatiser la prospection B2B et la veille d'appels d'offres.",
     "En parallèle, fondatrice et développeuse de 3S POS System, un SaaS multi-tenant développé de l'architecture au déploiement, combinant backend Python, applications React/Next.js et infrastructure DevOps.",
-    "Diplôme d'ingénieure prévu en septembre 2026.",
   ],
 
   experience: [
@@ -106,7 +105,7 @@ const cvData: {
       title: "3S POS System, SaaS de gestion commerciale multi-tenant",
       date: "2024 – Présent",
       company: "3S Tech & IA · Fondatrice & Développeuse",
-      synthese: "Plateforme SaaS destinée aux commerçants et pharmacies africains francophones pour la gestion des ventes, caisse, stocks, commandes, facturation et e-commerce. Développée en solo, de l'architecture au déploiement.",
+      synthese: "Plateforme SaaS destinée aux commerçants et pharmacies africains francophones pour la gestion des ventes, caisse, stocks, commandes, facturation et e-commerce. Développée en solo, de l'architecture au déploiement. Site : www.3spossystem.com",
       sections: [
         {
           heading: "Backend & Frontend",
